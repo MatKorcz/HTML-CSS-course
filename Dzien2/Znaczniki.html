@@ -1,0 +1,81 @@
+<!--
+Przydatne Rozszerzenia do brackets:
+
+Brackets icon
+emmet
+beauty
+minimap
+TODO
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--  dodatkowo dla przegladania na urzadzeniach mobilnych piszemy meta-vp + tab-->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!--mozna tez:-->
+  <link rel="stylesheet" href="">
+  <meta name="author" content="Jane Nowak">
+  <meta name="description" content="strony internetowe">
+  <meta name="keywords" content="tanio, dobrze, szybko">
+  <!--script-src + tab:-->
+  <script src=""></script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<!--komentarz utworzyc ctrl++, zakomentowanie czegos, odkomentowanie ctril+/-->
+
+<!--Przyciski i hiperłącza-->
+<p>Przyciski i hiperłącza:</p>
+<br>
+<button>Przycisk</button>
+<a href="onas.html">Przejdz na strone</a>
+<!--bloki div, header, main, footer, aside, nav-->
+<!--one wszystkie znaczą to samo. Kwestia tylko semantyki-->
+<p>bloki:</p>
+<div>Div</div>
+<header>header</header>
+<main>main</main>
+<footer>stopka</footer>
+<aside>aside</aside>
+<nav>menu</nav>
+<!--tekst - elementy blokowe (te ktore rozpoczynaja sie od nowej linii)-->
+<p>paragraf</p>
+<p>paragraf</p>
+<p>paragraf</p>
+<!--<!--tekst - elementy liniowe (te ktore nie rozpoczynaja sie od nowej linii) z <b> nie korzystamy pogrubiamy w CSS, ewentualnie aby cos wyróżnić, że semantycznie jest to istotne to robimy to za pomocą strong-->
+<p>Lorem ipsum dolor <b>sit</b> amet, <strong>consectetur</strong> adipisicing elit. <span>Rem reiciendis</span> sequi similique fugit numquam provident, recusandae quidem accusantium explicabo quaerat, consectetur quisquam possimus animi architecto vero consequuntur aperiam ea officiis.</p>
+<!--obrazy-->
+<h1>Zapisz się na studia PIOTŁKU!!!</h1>
+<img src="Burger.jpg" alt="informacja dla niewidomych zamiast zdj" title="tekst przy najechaniu na zdj">
+<!--nawigacja - szybszy sposob za pomocą emmet: nav>ul>li*5>a-->
+<nav>
+  <ul>
+    <li><a href="#">jeden</a></li>
+    <li><a href="">dwa</a></li>
+    <li><a href="">trzy</a></li>
+    <li><a href="">cztery</a></li>
+    <li><a href="">pięć</a></li>
+  </ul>
+</nav>
+<!--formularze form, button, input, label, select, textarea, checkbox -->
+<form action="">
+  <label for="Podaj imię i nazwisko">
+    <!--zamiast text jak wpiszemy password to będą gwiazdki, a jak jakiś tekst to będzie się on wyświetlał-->
+    <input type="text" placeholder="imie i nazwisko" required>
+    <!--    Required potrzebny jakis tekst inaczej nie wyśle.-->
+  </label>
+  <input type="text">
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button>Wyślij</button>
+
+</form>
+<!--NOTE: notatka-->
