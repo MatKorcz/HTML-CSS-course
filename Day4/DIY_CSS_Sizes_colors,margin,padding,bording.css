@@ -1,0 +1,96 @@
+/*
+
+*----------------------------------------------*
+*             ###CSS SIZES:###                 *
+*----------------------------------------------*
+
+
+Below shown common sizes used as values in CSS:
+
+px    - pixels
+%     - percent of enherited property size
+em    - ratio from the parent e.g. 2em (means 2x px of parent property size value)
+rem   - ratio from main selector (<HTML>)
+vw    - viewport width - width [%] of viewport e.g. 100vw means 100% viewport width
+vh    - viewport height - height [%] of viewport e.g. 50vw means 50% viewport height
+
+
+*COLORS VALUES*
+
+#010101                 - hexadecimal type.
+#ddd                    - short version of hexa.
+rgba (155, 255, 100, 1) - red, green, blue ratios and last means tranparent.
+rgb (155, 255, 1)       - same with default transparent val.
+yellow:                 - you can type specific name of color.
+
+
+*----------------------------------------------*
+*             ###CSS PROPERTIES:###            *
+*----------------------------------------------*
+
+
+*OTHERS*
+background-color: #010101;
+color: red;
+width: 10px                             - width of obj.
+height: 20px                            - height of obj.
+letter-spacing: 2px;                    - size of space between letters.
+word-spacing: 2px;                      - size of space between words.
+
+
+
+*FONTS*
+font-size: 10px;
+line-height: 12px;                      - means if font-size is 10px, line-height 12px, so
+                                          the space between total height line and letters will be 1px up of letter and 1px under.
+font-family: arial, tahoma, sans-serif; - which means that if there is no arial it will use tahoma font style
+                                          if it is not avaible too, it choose any sans serif font style.
+font-weight: bold;                      - from 100-700, or normal/bold.
+font-style: italic;                     - italic.
+
+*SHORTCUT FONT DECLARATION PROPERTIES*
+font: font-style font-weight font-variant font-size/line-height font-family
+e.g.:
+font: italic bold small-caps 20px/140% tahoma
+
+*IMPORTANT*
+to use shortcute MINIMUM you have to declare is font-size and font-family, e.g.: font: 20px arial;
+
+
+
+*HOVER*
+if we use e.g. .classname:hover { instruction } "hover" is special skill that will do instruction
+after hovering over that object
+
+
+
+*MARGIN/PADDING/BORDER*
+margin                         - outside margin
+padding                        - inside margin
+border                         - frame between padding and margin
+
+margin: 10px 20px 30px 40px;   - like in clock: up margin size, right, down, left.
+                                 if you type only margin 10px 20px means up&down, left&right.
+margin-top: 10px;              - selected side of margin size.
+___
+padding same like margin;
+___
+border: 3px solid #ddd;        - border have 3 properties: size, style, color. You can select one of those
+border-left-width: 3px;
+border-width:3px;
+border-top-style: solid;
+border-style: solid;
+border-top-color: #ddd;
+border-color: #ddd;
+
+
+
+*TEXT*
+text-indent: 2px;              - indent of text.
+text-align: justify;           - justify/center/left/right;
+text-transform: uppercase;     - uppercase/lowercase/capitalize;
+vertical-align: top;           - top/down/baseline/0-100; fitting to calculated line words which are not same height.
+text-decoration: underline;    - underline/line-thourgh/none/overline;
+
+
+*/
