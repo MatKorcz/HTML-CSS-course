@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+}
+
+
+p {
+  line-height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-size: 10vh;
+  text-decoration: underline;
+}

@@ -1,0 +1,85 @@
+<!--
+
+*----------------------------------------------*
+* ###CASCADING RULES OF WEB BROWSWER:###       *
+*----------------------------------------------*
+
+1. First of all web browswer is initalizing values of properties by common initializing values for all browsers.
+
+2. After that web browswer upload typed HTML file and convert it into DOM. There is checking every property value of each object and copying values scripted from our HTML to DOM. Every property undefined is getting default value from own specific value. 
+
+3. Next there is uploading CSS files that describing properties on their own. And cascading Rules decides which property value are updating because are more prority.
+
+
+*----------------------------------------------*
+*           ###INHERITANCE:###                 *
+*----------------------------------------------*
+
+RULES:
+
+1. Only a part of total properties are inherited.
+
+2. Inherited is realising from the parent to the child ONLY if there is no rule descriped (e.g. in CSS file).
+
+
+
+1. Values of properties initialized jointly in common web browswers.
+
+2. Values of properties initialized by rules of each web browswer.
+
+3. Values of properties which are inherinced from parents specified properties (that we speciefied in CSS e.g.). It means that for example if p is parent of span and we declared in CSS file property which is imherited. That means that child span will inherit it from parent p.
+
+4. Precising selecting is more priority then imheriting. If more precising is selected object then is more priority his value of property.
+
+Of precise there is deciding medals rule:
+* 1 golden medal is is worth more than 999 other silver medals. Golden medal is selecting by ID
+** 1 silver medal is worth more then 999 other bronze medals. Silver medal is selecting by determining kinship
+
+*IMPORTANT*
+Every combinator is on same stage.
+
+
+
+*------------------------------------------------*
+*              ###E G Z A M P L E:###            *
+*------------------------------------------------*
+*  <html>                                        *
+*    <body>                                      *
+*      <p class="ClassNameP">                    *
+*      </p>                                      *
+*    </body>                                     *
+*  </html>                                       *
+*------------------------------------------------*
+- if we type html body p {color: blabla;}.
+
+- it is "3 bronze medals" and is more priority then we type p{color: blabla;}.
+
+- If we type .ClassNameP {color: blabla;} it is like silver medal and is more priority then any val. of bronze medals.
+
+- if we type #ClassName {color: blabla;} it means it is gold medal and it is the most priority.
+*IMPORTANT*
+Pseudo-classes (that classes that web browswer creating e.g. :hover ) are counting like normal class.
+
+*IMPORTANT*
+There is cheat: if we type after property !important it wins anyway. E.g.: p{color: blue !important;}
+
+*IMPORTANT*
+
+*{color: red;} - * is not giving any medal. If there is anything which brings medal - it is updating obj. property val.
+
+*------------------------------------------------*
+*              ###E G Z A M P L E:###            *
+*------------------------------------------------*
+*  <div class="blue">                            *
+*    <p class="red"> Tekst </p>                  *
+*  </div>                                        *                              
+*------------------------------------------------*
+
+div.blue p{color:blue}
+p.red {color: red;}
+body div p {color: green}
+div>p {color: yellow}
+
+so priority is blue>red>green>yellow.
+
+-->
