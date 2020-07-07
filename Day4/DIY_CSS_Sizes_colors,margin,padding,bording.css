@@ -72,6 +72,8 @@ border                         - frame between padding and margin
 margin: 10px 20px 30px 40px;   - like in clock: up margin size, right, down, left.
                                  if you type only margin 10px 20px means up&down, left&right.
 margin-top: 10px;              - selected side of margin size.
+
+*IMPORTANT* Margins doesn't sum. If we have obj with margin 20px, and under it another obj with 10px it doesnt mean that margin between them is 10+20px. IT IS JUST 20px!
 ___
 padding same like margin;
 ___
@@ -92,5 +94,10 @@ text-transform: uppercase;     - uppercase/lowercase/capitalize;
 vertical-align: top;           - top/down/baseline/0-100; fitting to calculated line words which are not same height.
 text-decoration: underline;    - underline/line-thourgh/none/overline;
 
-
+*OVERFLOWING*
+overflow: hidden;              - Hide anything which is overflowing tekst space in over it.
+min-width: 200px;              - Minimum width value of text space as inicializing value.
+min-height: 200px;             - Minimum height value of text space as inicializing value.
+max-width: 300px;              - Maximum width of text space after it, it will overflowing.
+max-height: 300px;             - Minimum height value of text space as inicializing value.
 */

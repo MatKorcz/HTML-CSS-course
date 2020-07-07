@@ -1,0 +1,75 @@
+/*
+
+*----------------------------------------------*
+*         ###BLOCK ELEMENTS IN CSS:###         *
+*----------------------------------------------*
+
+
+- Most elements in CSS are block type. 
+- Block elements have default property display: block. This property affect how element behaves. It including another         default property values: width 100% from his parent, and height auto:
+
+                block element {
+
+                display: block;
+                width: 100%;
+                height: auto;
+
+                }
+- New block element = new line.
+- Block element can nest another block elements, and is able to have line elements.
+- We have full control of "box" properties: which means we can change width, height, margin, padding, border.
+
+
+Most common block elements in css that You can meet:
+
+<article>
+<aside>
+<div>
+<form>
+<h1-h6>
+<header>
+<li>
+<ol>
+<ul>
+<nav>
+<main>
+<p>
+<pre>
+<section>
+<table>
+etc..
+
+
+
+*----------------------------------------------*
+*         ###LINE ELEMENTS IN CSS:###          *
+*----------------------------------------------*
+
+- Only few elements in css.
+- Height and width doesn't depend on parents. Properties have values auto:
+
+              linear element {
+
+                display: inline;
+                width: auto;
+                height: auto;
+
+                }
+- YOU CAN'T change width and height. Any update doesn't change their value.
+- Also margin top and bottom is not changing.
+- New linear element !new line.
+- To be able to make changes of it, we have to change display: from inline to block, or inline-block;
+
+Line elements in css:
+<a>
+<b>
+<em>
+<i>
+<img> - EXCEPTION!
+<span>
+<strong>
+
+*IMPORTANT*
+<img> is not exacly linear block. It is only until src: is not ref to picture which fill <img>. After that You can change width and height.
+
+*/
