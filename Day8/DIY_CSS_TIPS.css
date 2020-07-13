@@ -1,0 +1,63 @@
+/*
+
+E.G. 
+To generate 4x <a href="#" use shortcut:
+a[#]*4 
+
+
+
+To begin with project good habit is to reset in whole html file margin and padding:
+*{
+margin: 0;
+padding: 0;
+}
+
+
+
+*Page Navigate, size:*
+After click go back up to the page:
+href="#" means go up 
+<a href="#" class=""></a>
+
+Page extension to 1280px and width center:
+Create div.wrapper obj, which includes whole body objects and in css give max-width property and centeralize margin:
+div.wrapper {
+max-width: 1280px;
+margin: 0 auto;
+}
+
+
+--------------------------***Zmiana rozmiarów obiektów liniowych [przyciskow]:***------------------------------------------
+Nalezy zmienic display elementu liniowego na obiektowo-liniowy i pozniej mozna na szerokosc 25% monitora zmieniac obiekt. Jednak, zeby width obiektu byl liczony jako calosc (content+padding+border), to zmieniamy box-sizing z content na border:
+nav a{
+box-sizing: border-box;
+display: inline-block;
+width:25%;
+}
+
+*WAZNE*
+Wystepuje bug - elementy liniowe maja jakis margines. Trzeba font-size ich rodzica zmienic na 0:
+
+nav{
+font-size: 0;
+}
+
+**Centrowanie przycisku text-align:center;**
+zmiana rozmiarow: padding: 10px 25px;
+lub na wysokosc mozna inaczej: line-height: 30px;
+*WAZNE*
+Jesli ustawiamy hover, gdzie ma sie pojawic border-bottom jako podkreslenie przy najechaniu i rozwala nam to strone bo sie pojawia biala linia to jest to spowodowane tym, ze prawdopodobnie height mamy na auto i on automatycznie sie zmienia. Wiec trzeba ustalic mu line-height na konkretna wartosc.
+
+Zmiana pozycji przyciskow ktore stoja kolo siebie najlepiej jest realizowac od rodzica czyli przez wspolna sekcje, navi, menu, czy inny div. wtedy jak chcemy aby byla przestrzen nad i pod nimi to padding: 10px. Pamietaj ze jak zmienisz margin a nie padding, to zmieni sie kolor na bialy, bo margin nie ma background. Aby przyciski byly wycentrowane, albo po prawej to text-align.
+
+
+*ENCJE*
+Czyli znaki specjalnie. piszemy & i szykamy nasza encje. 
+
+*OBRAZKI W TLE*
+background-image: ('image.jpg'); - zdj jako background
+background-size: cover; - dopasowanie obrazka do przestrzeni
+
+*WAZNE* 
+Jesli napis sloganowy na obrazku jest niewidoczny, to jesli rodzic ma background color i dziecko to napis, to trzeba w dziecku ustalic dodatkowo background-color: RGBA (0,0,0, 0.5); dzieki temu w polowie "przyciemnimy".
+*/

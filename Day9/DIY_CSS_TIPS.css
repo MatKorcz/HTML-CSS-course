@@ -1,0 +1,16 @@
+/*
+
+
+*----------------------------------------------*
+*           ###FLOAT PROPERTY:###              *
+*----------------------------------------------*
+
+For build menu buttons usually we do not use display: inline-block, but float property. Float is moving block objects to the side that we direct. E.G.:
+
+float: left; means that block will moved to the left side. Float property solve problem with strange margins from line obj.
+Problem with float is that parent doesn't see child's height. So if it is needed, you have to type into parent's rule child's height.
+
+*IMPORTANT*
+VH include scrolling rectangle. if you use wight with % value it dosn't count scrolling rectangle.
+
+*/

@@ -1,0 +1,650 @@
+/*
+
+*----------------------------------------------*
+*      ###SELECTORS AND COMBINATORS:###        *
+*----------------------------------------------*
+
+
+***In CSS we use the so-called Rules:*** 
+      _________________________
+e.g. | h1 { property: value; } |
+      -------------------------
+Rules allows us changing properties of the object.
+To select choosed object we use "Selectors", for choosing specific obj. we use "Combinators".
+
+
+
+***SELECTORS:***
+
+If you selecting "normal" selector like h1, p, span etc. You have to type simply
+name of this selector like for e.g. h1 {}
+
+If you are going to choose class selector, before name you have to type "." e.g.: .ClassName {}
+
+
+
+***COMBINATORS:***
+
+Avaible combinators (with e.g. selectors) are shown below:
+
+p  h1 {} - means h1 descendant of p (in contrast to p>h1, h1 don't have to be directly 
+           descendant of p. The h1 can be e.g. inside of span which is inside of this p and this "h1" is
+           selected too)
+
+p + p {} - means that we choosing the second "p" (this one after +) which is his "younger brother"
+           so if you type p + p + p {} - that means that you select last 2x p.
+
+p ~ p {} - means that we are choosing second p, and every next p (like p+p+p+p...).
+
+p>h1     - means that we are selecting a DIRECT descendant of p (so h1)
+           so if you type p>h1>span {} - that means you select span of h1 of p.
+
+*{}      - means every selector.
+
+p,h1  {} - means that we are selecting 2 selectors at same time.
+
+
+
+***Assembling CSS:***
+You can quickly put it on <head> in HTML file using there index <style> </style> just for quickly
+testing our solution. But finally we have use external file .css and link it in HTML by <link>
+
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+
+*----------------------------------------------*
+*             ###CSS SIZES:###                 *
+*----------------------------------------------*
+
+
+Below shown common sizes used as values in CSS:
+
+px    - pixels
+%     - percent of enherited property size
+em    - ratio from the parent e.g. 2em (means 2x px of parent property size value)
+rem   - ratio from main selector (<HTML>)
+vw    - viewport width - width [%] of viewport e.g. 100vw means 100% viewport width
+vh    - viewport height - height [%] of viewport e.g. 50vw means 50% viewport height
+
+
+*COLORS VALUES*
+
+#010101                 - hexadecimal type.
+#ddd                    - short version of hexa.
+rgba (155, 255, 100, 1) - red, green, blue ratios and last means tranparent.
+rgb (155, 255, 1)       - same with default transparent val.
+yellow:                 - you can type specific name of color.
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+
+*----------------------------------------------*
+*             ###CSS PROPERTIES:###            *
+*----------------------------------------------*
+
+
+*OTHERS*
+
+color: red;
+width: 10px                             - width of obj.
+height: 20px                            - height of obj.
+letter-spacing: 2px;                    - size of space between letters.
+word-spacing: 2px;                      - size of space between words.
+background-color: #010101;              - color of background
+background-size: cover;                 - fit image in allow space
+background-image: ('image.jpg');        - image as background
+list-style-type: none;                  - delete dots from list
+
+*IMPORTANT*
+If you want to set title on background-image (background-image into parent property, title as font property of child obj.) and it is not clearly visible:
+- set child background-color: RGBA (0,0,0,0.5) which darken background and the white title will be better visible.
+
+
+
+*FONTS*
+font-size: 10px;
+line-height: 12px;                      - means if font-size is 10px, line-height 12px, so
+                                          the space between total height line and letters will be 1px up of letter and 1px under.
+font-family: arial, tahoma, sans-serif; - which means that if there is no arial it will use tahoma font style
+                                          if it is not avaible too, it choose any sans serif font style.
+font-weight: bold;                      - from 100-700, or normal/bold.
+font-style: italic;                     - italic.
+
+
+*TEXT*
+text-indent: 2px;              - indent of text.
+text-align: justify;           - justify/center/left/right;
+text-transform: uppercase;     - uppercase/lowercase/capitalize;
+vertical-align: top;           - top/down/baseline/0-100; fitting to calculated line words which are not same height.
+text-decoration: underline;    - underline/line-thourgh/none/overline;
+
+*OVERFLOWING*
+overflow: hidden;              - Hide anything which is overflowing tekst space in over it.
+min-width: 200px;              - Minimum width value of text space as inicializing value.
+min-height: 200px;             - Minimum height value of text space as inicializing value.
+max-width: 300px;              - Maximum width of text space after it, it will overflowing.
+max-height: 300px;             - Minimum height value of text space as inicializing value.
+
+*HOVER*
+if we use e.g. .classname:hover { instruction } "hover" is special skill that will do instruction
+after hovering over that object
+
+a:hover {
+transition .2s;                - slow effect of making all properties inside of hover quasiclass 
+
+}
+
+*----------------------------------------------*
+*         ###MARGIN/PADDING/BORDER:###         *
+*----------------------------------------------*
+
+margin                         - outside margin
+padding                        - inside margin
+border                         - frame between padding and margin
+
+
+**************
+*** MARGIN ***
+**************
+
+margin: 10px 20px 30px 40px;   - like in clock: up margin size, right, down, left.
+                                 if you type only margin 10px 20px means up&down, left&right.
+margin-top: 10px;              - selected side of margin size.
+
+*IMPORTANT* Margins doesn't sum. If we have obj with margin 20px, and under it another obj with 10px it doesnt mean that margin between them is 10+20px. IT IS JUST 20px!
+
+
+***************
+*** PADDING ***
+***************
+
+padding same like margin;
+
+
+**************
+*** BORDER ***
+**************
+
+border: 3px solid #ddd;        - border have 3 properties: size, style, color. You can select one of those
+border-left-width: 3px;
+border-width:3px;
+border-top-style: solid;
+border-style: solid;
+border-top-color: #ddd;
+border-color: #ddd;
+
+
+
+
+
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+
+*----------------------------------------------*
+*         ###BLOCK ELEMENTS IN CSS:###         *
+*----------------------------------------------*
+
+
+- Most elements in CSS are block type. 
+- Block elements have default property display: block. This property affect how element behaves. It including another         default property values: width 100% from his parent, and height auto:
+
+                block element {
+
+                display: block;
+                width: 100%;
+                height: auto;
+
+                }
+- New block element = new line.
+- Block element can nest another block elements, and is able to have line elements.
+- We have full control of "box" properties: which means we can change width, height, margin, padding, border.
+
+
+Most common block elements in css that You can meet:
+
+<article>
+<aside>
+<div>
+<form>
+<h1-h6>
+<header>
+<li>
+<ol>
+<ul>
+<nav>
+<main>
+<p>
+<pre>
+<section>
+<table>
+etc..
+
+
+
+*----------------------------------------------*
+*         ###LINE ELEMENTS IN CSS:###          *
+*----------------------------------------------*
+
+
+- Only few elements in css.
+- Height and width doesn't depend on parents. Properties have values auto:
+
+              linear element {
+                display: inline;
+                width: auto;
+                height: auto;
+                }
+
+- YOU CAN'T change width and height. Any update doesn't change their value.
+- Also margin top and bottom is not changing.
+- New linear element !new line.
+- To be able to make changes of it, we have to change display: from inline to block, or inline-block;
+
+Line elements in css:
+<a>
+<b>
+<em>
+<i>
+<img> - EXCEPTION!
+<span>
+<strong>
+
+*IMPORTANT*
+<img> is not exacly linear block. It is only until src: is not ref to picture which fill <img>. After that You can change width and height.
+
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+
+*----------------------------------------------*
+*              ### TIPS IN CSS: ###            *
+*----------------------------------------------*
+
+
+
+
+
+*********************************
+*** RESET AT BEGIN OF PROJECT ***
+*********************************
+
+To begin with project good habit is to reset in whole html file margin and padding:
+*{
+margin: 0;
+padding: 0;
+}
+
+*************************************************
+*** Page extension to 1280px and width center ***
+*************************************************
+
+In HTML wrap whole body with additional div.Wrapper class and in CSS file type rule:
+
+div.wrapper {
+max-width: 1280px;
+margin: 0 auto;
+}
+
+
+**********************************
+*** Popular screen resolutions ***
+**********************************
+
+- 1280
+- 1440
+- 1600
+- 1920
+
+****************************************
+***             BUTTONS:             ***
+****************************************
+
+
+To manipulate size of linear elements, we have to change display of this obj from inline to inline-box.
+
+*IMPORTANT*
+If we want count width as whole (content+padding+border) it is needed to change box sizing from content to border
+
+
+E.G.:
+
+nav a{
+box-sizing: border-box;
+display: inline-block;
+width:25%;
+padding: 10px 25px;
+margin: 10px 15px;
+border: 2px solid brown;
+font-size: 20px;
+text-decoration: none;
+font family: arial, sans-serif;
+text-transform: uppercase;
+color: brown;
+text-align: center;
+line-height: 40px;
+background-color: blue;
+}
+
+*IMPORTANT*
+There is a bug. Linear elements have "bugged marine". There is few methods how to solve problem.
+1. First is just to change font-size of parent to 0:
+
+nav{
+font-size: 0;
+}
+
+
+
+************************
+*** CENTERING BUTTON ***
+************************
+
+
+text-align: center;
+padding: 10px 25px;
+line height: 30px;
+
+*IMPORTANT*
+if we use hover, and border-bottom into property of it as underlining when hovering over a button there is possible crash situation cuz of visibling weight line which is caused of height auto which automatically change size of it. To solver problem it is needed to pick static value of line height.
+
+
+Changle buttons position which are located next each other is best to realize from their parent so with common object like navi, menu, section etc. Makes it possible:
+- Set padding: 10px; to increase more space up and down to content.
+
+*IMPORTANT* 
+If you use margin (not padding) the background will not inherit so will be default.
+
+
+
+*************
+*** ENCJE ***
+*************
+
+
+Special signs. To pick it up start with type "&" and choice sign from hint.
+
+
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+
+*----------------------------------------------*
+*                 ### FLOAT ###                *
+*----------------------------------------------*
+
+
+Float is used for:
+- Create page layout
+- Create menu
+- Positioning images in obj with text.
+
+E.G.:
+
+dla html div>img+p:
+
+img {
+float: left;
+width:25%;
+}
+p {float: left;
+width:75%}
+
+
+*IMPORTANT*
+Parent doesn't see childs height (from him it is 0px)
+
+
+4 Solutions to solve bug problem with Float:
+1. Overflow: hidden or auto on parent
+2. Static height value on parent
+3. Additional obj in HTML which have property clear: both;
+4. clear:both; without additional obj but needed use quasielement after. Remmeber use it on parent (cuz there is a height bug problem).
+
+
+
+*************
+*** Ad. 3 ***
+*************
+
+
+E.G.:
+
+html:
+<ul>
+  <li>Pozycja 1</li>
+  <li>Pozycja 2</li>
+  <li>Pozycja 3</li>
+<li class="clear"></li>
+</ul>
+
+css:
+.clear{clear:both;}
+
+
+
+*************
+*** Ad. 4 ***
+*************
+
+
+E.G.:
+
+html:
+<ul class="clearfix">
+  <li>Pozycja 1</li>
+  <li>Pozycja 2</li>
+  <li>Ppzycja 3</li>
+</ul>
+
+css:
+.clearfix::after{
+content:"";
+display:block;
+
+
+
+*----------------------------------------------*
+*            ### PSEUDOELEMENTS ###            *
+*----------------------------------------------*
+
+
+::first-line
+::first-letter
+::selection
+::before
+::after
+
+
+Pseudoelements ::before ::after
+Elements that browswer creating automatically if you include it in css file.
+::before is creating as first, ::after as last.
+
+
+E.G.:
+
+div::before{content: "";}
+div::after{content: "";}
+
+in html file it looks like:
+<div>
+::before
+</div>
+::after
+
+
+
+*----------------------------------------------*
+*              ### PSEUDOCLASS ###             *
+*----------------------------------------------*
+
+
+
+Pseudoclass :hover :focus :first-child
+Class that broswer creating automatically if you include it in css file.
+
+:hover           - event if the element is hovered
+:focus           - event active element if status is activated
+:first-child     - place in structure
+:visited         - if link was clicked before
+:nth-child(n)    - select n child
+:nth-of-type(n)  - select n of type child
+
+nth-child(n) Examples:
+
+nth-child(4)     - selected 4th child of obj.
+nth-child(2n)    - selected every 2,4,6...2n child
+nth-child(3n-2)  - selected every 1,4,7...3n-2 child
+nth-child(even)  - parzysty child
+nth-child(odd)   - nieparzysty child
+
+*IMPORTANT*
+
+if:
+<nav>
+  <div> </div>
+  <a> </a>
+  <a> </a>
+</nav>
+
+a:nth-child(1) {}      - it will not select anything cuz first child is div!
+
+Here you have to type:
+a:nth-of-type(1) {}    - and it will select first a of that
+
+
+______________________________________________________________________________________________
+*/
+
+/*
+
+
+
+*----------------------------------------------*
+*            ### EMMETS SHORTCUTS:###          *
+*----------------------------------------------*
+
+
+*************
+*** !+TAB ***
+*************
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
+
+**********************
+*** OBJ_NAME + TAB ***
+**********************
+
+<p> </p>
+
+
+***********************************
+*** FONT DECLARATION PROPERTIES ***
+***********************************
+
+font: font-style font-weight font-variant font-size/line-height font-family
+
+E.G.:
+font: italic bold small-caps 20px/140% tahoma
+
+*IMPORTANT*
+to use shortcute MINIMUM you have to declare is font-size and font-family, 
+
+E.G.:
+font: 20px arial;
+
+
+********************************
+*** GENERATE 4 same elements ***
+********************************
+
+
+E.G.:
+a[#].Botton$*4 +TAB
+
+Makes:
+<a href="#" class="Botton1"></a>
+<a href="#" class="Botton2"></a>
+<a href="#" class="Botton3"></a>
+<a href="#" class="Botton4"></a>
+
+
+***************************
+*** GENERATE 4 elements ***
+***************************
+
+
+E.G.:
+nav+header+main+footer +TAB
+
+Makes:
+<nav></nav>
+<header></header>
+<main></main>
+<footer></footer>
+
+
+
+*************
+*** LOREM ***
+*************
+
+
+E.G.:
+LOTEM1000 + TAB
+
+Makes:
+1000 words
+
+
+
+*****************************
+*** GENERATE OBJ INTO OBJ ***
+*****************************
+
+
+E.G.:
+body>nav>div
+
+Makes:
+<body>
+  <nav>
+    <div></div>
+  </nav>
+</body>
+
+______________________________________________________________________________________________
+*/
+
+/*
+
+
+
+______________________________________________________________________________________________
+*/
