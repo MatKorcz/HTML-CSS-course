@@ -116,6 +116,9 @@ font-family: arial, tahoma, sans-serif; - which means that if there is no arial 
                                           if it is not avaible too, it choose any sans serif font style.
 font-weight: bold;                      - from 100-700, or normal/bold.
 font-style: italic;                     - italic.
+Hyphens: auto;                          - dzielenie slow żeby się miescilo
+Text-elign-last: center;                - ostatnie slowo na srodku np
+Word-wrap: break-word;                  - dzielenie slowa jak wychodzi poza ramke
 
 
 *TEXT*
@@ -532,8 +535,194 @@ a:nth-of-type(1) {}    - and it will select first a of that
 ______________________________________________________________________________________________
 */
 
+
 /*
 
+
+
+
+*----------------------------------------------*
+*              ### POSITION ###             *
+*----------------------------------------------*
+
+
+
+Default Position: static;
+
+Positions avaible in CSS:
+- static
+- fixed
+- absolute
+- relative
+
+
+
+***********************
+*** Position: FIXED ***
+***********************
+
+
+Position fixed: 
+- breaks out of the page structure
+- Is not related with any objects. Can hide each other and it depends on z-index property.
+- avaible whole obj. control (padding, margin, border, height, width etc.)
+- default it is block element
+- is taped to the browswer (e.g. is moving when you scrolling to be on same positon as we typed)
+
+
+Moving objects depending on which side we use:
+
+E.G.: if we type:
+position: fixed;
+left: 30px;               - means that object move from left side 30px to right
+top: 20px;                - means that object move from top 30 px down
+
+But if we type:
+position: fixed;
+right: 30px               - that means the object will move from right side 30 px to left
+
+*IMPORTANT*
+If you type both sides e.g. left:0 right:0 the object width will be from left 0 to right 0 so whole 100% width
+So if you also type width and heght property, and both sides (e.g. left, right, top, bottom) - width and height will overwrite that values.
+
+
+****************************
+*** Position properties: ***
+****************************
+
+
+position: static/fixed/absolute/relative;
+left:
+right:
+top:
+bottom:
+z-index: 1;               - To decide which layer of object is visible, and which will hide another. bigger number > lower.
+
+
+
+**************************
+*** Position: ABSOLUTE ***
+**************************
+
+- is not taped to the browser (when we scrolling page, the obj. is not moving with scroll.)
+- position can be not related with browswer (default it is, but we can change it). If any parent of his parent got positon: relative, it will default related with browswer and to it it will be positioned.
+- avaible whole obj. control (padding, margin, border, height, width etc.)
+- default it is block element
+- need position: relative on parent - to position with when needed to be positioned. (default is with broswer)
+
+
+
+**************************
+*** Position: RELATIVE **
+**************************
+
+- the element is still in the same place from the point of view of structure, but in the view layer it is possible to move it so that it will look somewhere else. However, "physically", ie in the structure layer, other objects will still see it where it was
+______________________________________________________________________________________________
+*/
+/*
+
+
+*----------------------------------------------*
+*         ### BACKGROUND PROPERTIES:###        *
+*----------------------------------------------*
+
+
+
+************************
+*** BACKGROUND COLOR ***
+************************
+
+Characteristic:
+- default: background-color: transparent
+- changing background color make changes in content, padding and bording.
+
+
+************************
+*** BACKGROUND-IMAGE ***
+************************
+
+Characteristics:
+- when obj have static height and wight sizes, the picture that we import into that obj is pasting from top left corner to the bottom right in defines in picture sizes from the padding. Inside border there is kind of copy image but in different way.
+- if picture sizes it less then the obj. image is copying in that way to fill whole size of the obj.
+- if we want to not replicate pictures it is neeeded to change property: background-repeat: no-repeat;
+- there is avaible to pick many pictures inside of the obj:
+
+E.G.:
+background-image: url ("picuture1.jpg"), url ("picuture2.jpg");
+
+
+
+***************************
+*** BACKGROUND-POSITION ***
+***************************
+
+Characteristic:
+- very specific positioning control. If we type:
+  * Background-position: 20%;                 - it means that 20% will be from left 30% of size obj to right width, 
+and because we didn't define second argument (height) it will be default: center.
+  * Bacground-position: 50% 50%;              - means that it will be defined as center. (counting not from left but from 
+          center of picture)
+  * Background-position: 50% 20% 40% 60%;     - clock method: 50% top, 20% right 40% bottom 60% left
+  * Background-position: left;                - to left side
+  * Background-position: bottom 30% right 50% - means 30% from bottom up and right center (50% always means center).
+
+
+
+
+***********************
+*** BACKGROUND-SIZE ***
+***********************
+
+
+Characteristics:
+- Specific size control. If we type:
+  * background-size: 100% 100% - it will fill width and height of obj in 100% (size of picture is modify to size obj)
+  * background-size: 50% auto  - in width it will be 50% of size obj, and height will be in proportion of picture
+  * background-size: cover     - fill all obj size but in good proportion of picture and starting from top-left pic.                                      Browswer trying to cut as less of pic as   it is possible
+  * background-size: contain   - the whole picture is in obj without cut
+
+
+
+
+*****************************
+*** BACKGROUND-ATTACHMENT ***
+*****************************
+
+- Default: scroll;
+- background-attachment: fixed; - means that it will be typed to browser and when we scroll, the picture is moving
+Characteristic:
+
+______________________________________________________________________________________________
+*/
+/*
+
+
+*----------------------------------------------*
+*                ### MOBILE:###                *
+*----------------------------------------------*
+
+
+
+In desktop 1px = 1px
+In mobile there is another mode: mobile. It change real px to nominal px (CSS resolution) cause it is not comfortable fill too high resolution in such litle device like smartphone. so There is convert e.g. 1080 x 1920 to 360 x 640px
+
+
+To allow mobile broswer display nominal pixels it is needed to add:
+
+******************************************************************************
+*   <meta name="viewport" content="width=device-width, initial-scale=1.0">   *
+******************************************************************************
+
+
+Which means:
+content="width=device-width   - means width browswer page = width of device
+initial-scale=1.0             - means according to DRP 100% zoom
+
+
+
+______________________________________________________________________________________________
+*/
+/*
 
 
 *----------------------------------------------*
@@ -564,9 +753,11 @@ ________________________________________________________________________________
 <p> </p>
 
 
+
 ***********************************
 *** FONT DECLARATION PROPERTIES ***
 ***********************************
+
 
 font: font-style font-weight font-variant font-size/line-height font-family
 
@@ -639,6 +830,20 @@ Makes:
   </nav>
 </body>
 
+
+******************************************************************************
+*** <meta name="viewport" content="width=device-width, initial-scale=1.0"> ***
+******************************************************************************
+
+E.G.:
+meta-vp + tab
+
+Makes:
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+
+orientation: portriat, landscape;
+@media () and(){}
 ______________________________________________________________________________________________
 */
 
