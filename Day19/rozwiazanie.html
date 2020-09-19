@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Domek</title>
+  <style>
+    span {
+      position: fixed;
+      top: 10%;
+      left: 0%;
+      background-color: orangered;
+      padding: 20px;
+      color: white;
+      font-family: arial;
+      cursor: pointer;
+      border: solid 3px #333;
+
+    }
+
+    div {
+      position: absolute;
+      left: 5%;
+      top: 85%;
+      /* width: 5vh;
+            height: 5vh; */
+      width: 0;
+      height: 0;
+      background-color: orangered;
+      transition: 0.1s;
+      border: solid 2px #333;
+    }
+
+    span:hover~div:nth-of-type(2) {
+      transition-delay: 0.2s;
+    }
+
+    span:hover~div:nth-of-type(3) {
+      transition-delay: 0.4s;
+    }
+
+    span:hover~div:nth-of-type(4) {
+      transition-delay: 0.6s;
+    }
+
+    span:hover~div:nth-of-type(5) {
+      transition-delay: 0.8s;
+    }
+
+    span:hover~div:nth-of-type(6) {
+      transition-delay: 1s;
+    }
+
+    span:hover~div:nth-of-type(1) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50vh;
+      height: 30vh;
+      z-index: 3;
+    }
+
+    span:hover~div:nth-of-type(2) {
+      top: calc(50% - 15vh);
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background-color: #555;
+      width: calc(50vh / 1.41);
+      height: calc(50vh / 1.41);
+      z-index: 2;
+    }
+
+    span:hover~div:nth-of-type(3) {
+      top: calc(50% - 25vh);
+      left: 58%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      width: 5vh;
+      height: 15vh;
+      z-index: 1;
+    }
+
+    span:hover~div:nth-of-type(4) {
+      top: calc(50% - 6vh + 15vh);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10vh;
+      height: 12vh;
+      z-index: 3;
+      background-color: #444;
+    }
+
+    span:hover~div:nth-of-type(5) {
+      top: calc(50% - 5vh);
+      left: calc(50% - 14vh);
+      transform: translate(-50%, -50%);
+      background-color: deepskyblue;
+      width: 8vh;
+      height: 9vh;
+      z-index: 3;
+    }
+
+    span:hover~div:nth-of-type(6) {
+      top: calc(50% - 5vh);
+      left: calc(50% + 14vh);
+      transform: translate(-50%, -50%);
+      background-color: deepskyblue;
+      width: 10vh;
+      height: 9vh;
+      z-index: 3;
+    }
+
+    span:hover~div {
+      transition: 1s;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: 5%;
+      left: 38%;
+      font-family: arial;
+      font-style: italic;
+      font-size: 60px;
+      color: white;
+      font-weight: 500;
+      transition: 2s;
+    }
+
+    span:hover~h1 {
+      color: orangered;
+    }
+  </style>
+
+
+
+
+
+
+</head>
+
+<body>
+  <span>BUDUJEMY</span>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <h1>Fajne, nie Piotr??</h1>
+  <img src="11111.png" alt="">
+</body></html>

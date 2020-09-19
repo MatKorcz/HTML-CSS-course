@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .grass {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 30vh;
+      background-color: green;
+      animation: grassAnimation linear 10s;
+    }
+
+    .sky {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 70vh;
+      background-color: cadetblue;
+      animation: skyAnimation linear 10s;
+    }
+
+    .sun {
+      position: absolute;
+      top: 30vh;
+      left: 45vw;
+      width: 10vh;
+      height: 10vh;
+      border-radius: 50%;
+      background-color: yellow;
+    }
+
+    @keyframes skyAnimation {
+      0% {
+        background-color: cadetblue;
+      }
+
+      20% {
+        background-color: papayawhip;
+      }
+
+      30% {
+        background-color: lightskyblue
+      }
+
+      50% {
+        background-color: deepskyblue;
+      }
+
+      70% {
+        background-color: lightskyblue;
+      }
+
+      80% {
+        background-color: pink;
+      }
+
+      100% {
+        background-color: cadetblue;
+      }
+    }
+
+    @keyframes grassAnimation {
+      0% {
+        background-color: seagreen;
+      }
+
+      20% {
+        background-color: greenyellow;
+      }
+
+      30% {
+        background-color: green
+      }
+
+      50% {
+        background-color: limegreen;
+      }
+
+      70% {
+        background-color: green;
+      }
+
+      80% {
+        background-color: greenyellow;
+      }
+
+      100% {
+        background-color: seagreen;
+      }
+    }
+
+    @keyframes sunAnimation {
+      0% {
+        left: 15vw;
+        bottom: 30%;
+      }
+
+      50% {
+        left: 50%;
+        bottom: 70%;
+      }
+
+      100% {
+        left: 70%;
+        bottom: 30%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grass"></div>
+  <div class="sky"></div>
+  <div class="sun"></div>
+</body></html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practice transition exercice</title>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+
+    .defaultBody {
+      background-color: darkgray;
+      transition: 1s;
+      display: block;
+    }
+
+
+
+    .redBody {
+      background-color: red;
+      transition: 1s;
+      display: none;
+    }
+
+    .greenBody {
+      background-color: green;
+      transition: 1s;
+      display: none;
+    }
+
+    .blueBody {
+      background-color: blue;
+      transition: 1s;
+      display: none;
+    }
+
+    .yellowBody {
+      background-color: yellow;
+      transition: 1s;
+      display: none;
+    }
+
+
+    h1 {
+      color: #333;
+      font-style: italic;
+      font-family: arial;
+      text-align: center;
+      margin-top: 45%;
+      transition: .3s;
+      display: block;
+    }
+
+    .redH1 {
+      display: none;
+    }
+
+    .greenH1 {
+      display: none;
+    }
+
+    .yellowH1 {
+      display: none;
+    }
+
+    .blueH1 {
+      display: none;
+    }
+
+    .redCircle {
+      position: absolute;
+      top: 3vw;
+      left: 3vw;
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      border-radius: 50%;
+      border: solid 2px white;
+    }
+
+ 
+
+    .greenCircle {
+      position: absolute;
+      top: 3vw;
+      right: 3vw;
+      width: 30px;
+      height: 30px;
+      background-color: green;
+      border-radius: 50%;
+      border: solid 2px white;
+    }
+
+
+    .blueCircle {
+      position: absolute;
+      bottom: 3vw;
+      left: 3vw;
+      width: 30px;
+      height: 30px;
+      background-color: blue;
+      border-radius: 50%;
+      border: solid 2px white;
+
+    }
+
+    .yellowCircle {
+      position: absolute;
+      bottom: 3vw;
+      right: 3vw;
+      width: 30px;
+      height: 30px;
+      background-color: yellow;
+      border-radius: 50%;
+      border: solid 2px white;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <body class="defaultBody">
+
+  </body>
+
+  <body class="redBody">
+
+  </body>
+
+  <body class="greenBody">
+
+  </body>
+
+  <body class="blueBody">
+
+  </body>
+
+  <body class="yellowBody">
+
+  </body>
+
+  <h1>Pick a color</h1>
+  <h1 class="redH1">Red Color</h1>
+  <h1 class="greenH1">Green Color</h1>
+  <h1 class="yellowH1">Yellow Color</h1>
+  <h1 class="blueH1">Blue Color</h1>
+  <div class="redCircle"></div>
+  <div class="greenCircle"></div>
+  <div class="blueCircle"></div>
+  <div class="yellowCircle"></div>
+
+</body></html>
