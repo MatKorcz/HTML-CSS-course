@@ -425,6 +425,7 @@ To begin with project good habit is to reset in whole html file margin and paddi
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 
 *************************************************
